@@ -8,14 +8,7 @@ class SearchPage extends Component {
 
   updateShelfForMovedBook = (matches, movedBook) =>
     matches.map(
-      (book) => (book.id === movedBook.id ? moveBook : book)
-      // {
-      //   if (book.id === movedBook.id) {
-      //     return movedBook;
-      //   } else {
-      //     return book;
-      //   }
-      // }
+      (book) => (book.id === movedBook.id ? movedBook : book)
     );
 
   updateShelfForMatches = (matches, books) => {
@@ -25,13 +18,6 @@ class SearchPage extends Component {
         bookIds.includes(book.id)
           ? books.filter((b) => book.id === b.id)[0]
           : book
-      // {
-      //   if (bookIds.includes(book.id)) {
-      //     return books.filter((b) => book.id === b.id)[0];
-      //   } else {
-      //     return book;
-      //   }
-      // }
     );
   };
 
